@@ -2,7 +2,7 @@
 **
 ** $Id: ds_utest_file.c 1.4.1.1 2015/02/28 17:13:46EST sstrege Exp  $
 **
-**  Copyright © 2007-2014 United States Government as represented by the 
+**  Copyright ï¿½ 2007-2014 United States Government as represented by the 
 **  Administrator of the National Aeronautics and Space Administration. 
 **  All Other Rights Reserved.  
 **
@@ -218,6 +218,7 @@ void Test_file(void)
     }
 
     /* (2) MessageID = found, file = disabled */
+    DS_TableCreateHash();
     DS_AppData.FileStatus[GOOD_FILE_ENTRY].FileState = DS_DISABLED;
     Counter32 = DS_AppData.FilteredPktCounter;
     DS_FileStorePacket(DS_HK_TLM_MID, (CFE_SB_MsgPtr_t) &HkPacket);

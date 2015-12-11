@@ -29,22 +29,22 @@
 *
 * Housekeeping Request
 * --------------------
-18BC C000 0001 0000    ; Housekeeping Request
+BC18 00C0 0100 0000    ; Housekeeping Request
 !
 *
 * Housekeeping Request
 * --------------------
-18BC C000 0001 0000    ; Housekeeping Request
+BC18 00C0 0100 0000    ; Housekeeping Request
 !
 *
 * NOOP Ground Command
 * --------------------
-18BB C000 0001 0000    ; NOOP Ground Command
+BB18 00C0 0100 0000    ; NOOP Ground Command
 *
 *
 * Housekeeping Request
 * --------------------
-18BC C000 0001 0000    ; Housekeeping Request
+BC18 00C0 0100 0000    ; Housekeeping Request
 !
 !
 * ***END DS SB COMMAND TESTING***

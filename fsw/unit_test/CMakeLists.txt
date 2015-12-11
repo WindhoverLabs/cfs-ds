@@ -5,6 +5,10 @@ set( MEMORYCHECK_COMMAND_OPTIONS "--trace-children=yes --leak-check=full" )
 
 # Set include directories
 include_directories(
+	../mission_inc
+	../platform_inc
+	$ENV{CFE_DIR}/fsw/mission_inc
+	$ENV{CFE_DIR}/fsw/platform_inc/cpu1
 	${CMAKE_CURRENT_SOURCE_DIR}/../../../cfs_lib/fsw/src
 	${CMAKE_CURRENT_SOURCE_DIR}
 	${CFE_INC_DIRS}
@@ -27,7 +31,6 @@ add_executable(DS-UT
 		${CMAKE_CURRENT_SOURCE_DIR}/../tables/ds_filter_tbl.c
 		${CMAKE_CURRENT_SOURCE_DIR}/../../../cfs_lib/fsw/src/cfs_utils.c
 		${APP_SRC}
-		${APP_CUSTOM_SRC}
 		${UTF_SRC})
 target_link_libraries(DS-UT -fprofile-arcs gcov ${CMAKE_THREAD_LIBS_INIT})
 
@@ -36,12 +39,12 @@ target_link_libraries(DS-UT -fprofile-arcs gcov ${CMAKE_THREAD_LIBS_INIT})
 add_test(NAME ds-ut
     COMMAND ${CMAKE_COMMAND}
     	-DTEST_PROG=$<TARGET_FILE:DS-UT>
-    	-DEXPECTED_OUTPUT=${UNIT_TEST_INPUT_DIR}/ds_utf_test.out
-    	-DACTUAL_OUTPUT=${CMAKE_CURRENT_BINARY_DIR}/ds_utf_test.out
+    	-DEXPECTED_OUTPUT=${CMAKE_CURRENT_SOURCE_DIR}/ds_utest.out
+    	-DACTUAL_OUTPUT=${CMAKE_CURRENT_BINARY_DIR}/ds_utest.out
     -P ${CMAKE_CURRENT_SOURCE_DIR}/runtest.cmake)
 
 # Copy input files to build directory
-configure_file(${UNIT_TEST_INPUT_DIR}/sbsim.in ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/sbsim.in ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
     
 # Build tables for the tests
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/disk/TT)

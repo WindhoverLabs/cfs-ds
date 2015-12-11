@@ -5,7 +5,7 @@ UTF Info: App <DS> added to App Tbl.
 *** DS -- Testing ds_cmds.c ***
 ERROR EVENT ID=32 Invalid NOOP command length: expected = 8, actual = 7
 ERROR EVENT ID=32 Invalid NOOP command length: expected = 8, actual = 9
-INFO EVENT ID=31 NOOP command, Version 0.0.0.0
+INFO EVENT ID=31 NOOP command, Version 2.4.1.0
 ERROR EVENT ID=34 Invalid RESET command length: expected = 8, actual = 7
 ERROR EVENT ID=34 Invalid RESET command length: expected = 8, actual = 9
 DEBUG EVENT ID=33 Reset counters command
@@ -46,7 +46,7 @@ ERROR EVENT ID=42 Invalid FILTER PARMS command: Message ID 0x18BB is not in filt
 SysLog:1980-001-00:00:00.00000 CFE_TBL:ValidateHandle-Table Handle=0 is for unused Table Handle
 SysLog:1980-001-00:00:00.00000 CFE_TBL:ValidateAccess-Invalid Tbl Handle=0
 SysLog:1980-001-00:00:00.00000 CFE_TBL:Modified-App(0) does not have access to Tbl Handle=0
-DEBUG EVENT ID=41 FILTER PARMS command: MID = 0x04X, index = 2232, filter = 14, N = 3, X = 1, O = 2
+DEBUG EVENT ID=41 FILTER PARMS command: MID = 0x08B8, index = 14, filter = 3, N = 1, X = 2, O = 0
 ERROR EVENT ID=44 Invalid DEST TYPE command length: expected = 12, actual = 11
 ERROR EVENT ID=44 Invalid DEST TYPE command length: expected = 12, actual = 13
 ERROR EVENT ID=44 Invalid DEST TYPE command arg: file table index = 16
@@ -69,34 +69,34 @@ DEBUG EVENT ID=45 DEST STATE command: file table index = 15, file state = 1
 ERROR EVENT ID=48 Invalid DEST PATH command length: expected = 76, actual = 75
 ERROR EVENT ID=48 Invalid DEST PATH command length: expected = 76, actual = 77
 ERROR EVENT ID=48 Invalid DEST PATH command arg: file table index = 16
-ERROR EVENT ID=48 Invalid DEST PATH command arg: pathname text
-ERROR EVENT ID=48 Invalid DEST PATH command arg: pathname text
-ERROR EVENT ID=48 Invalid DEST PATH command arg: pathname text
+ERROR EVENT ID=48 Invalid DEST PATH command arg: pathname
+ERROR EVENT ID=48 Invalid DEST PATH command arg: pathname
+ERROR EVENT ID=48 Invalid DEST PATH command arg: pathname
 ERROR EVENT ID=48 Invalid DEST PATH command: destination file table is not loaded
 SysLog:1980-001-00:00:00.00000 CFE_TBL:ValidateHandle-Table Handle=0 is for unused Table Handle
 SysLog:1980-001-00:00:00.00000 CFE_TBL:ValidateAccess-Invalid Tbl Handle=0
 SysLog:1980-001-00:00:00.00000 CFE_TBL:Modified-App(0) does not have access to Tbl Handle=0
-DEBUG EVENT ID=47 DEST PATH command: file table index = 15, pathname = /this/is/valid/
+DEBUG EVENT ID=47 DEST PATH command: file table index = 15, pathname = '/this/is/valid/'
 ERROR EVENT ID=50 Invalid DEST BASE command length: expected = 76, actual = 75
 ERROR EVENT ID=50 Invalid DEST BASE command length: expected = 76, actual = 77
 ERROR EVENT ID=50 Invalid DEST BASE command arg: file table index = 16
-ERROR EVENT ID=50 Invalid DEST BASE command arg: base filename text
-ERROR EVENT ID=50 Invalid DEST BASE command arg: base filename text
+ERROR EVENT ID=50 Invalid DEST BASE command arg: base filename
+ERROR EVENT ID=50 Invalid DEST BASE command arg: base filename
 ERROR EVENT ID=50 Invalid DEST BASE command: destination file table is not loaded
 SysLog:1980-001-00:00:00.00000 CFE_TBL:ValidateHandle-Table Handle=0 is for unused Table Handle
 SysLog:1980-001-00:00:00.00000 CFE_TBL:ValidateAccess-Invalid Tbl Handle=0
 SysLog:1980-001-00:00:00.00000 CFE_TBL:Modified-App(0) does not have access to Tbl Handle=0
-DEBUG EVENT ID=49 DEST BASE command: file table index = 15, base filename = _this_is_valid_
+DEBUG EVENT ID=49 DEST BASE command: file table index = 15, base filename = '_this_is_valid_'
 ERROR EVENT ID=52 Invalid DEST EXT command length: expected = 20, actual = 19
 ERROR EVENT ID=52 Invalid DEST EXT command length: expected = 20, actual = 21
 ERROR EVENT ID=52 Invalid DEST EXT command arg: file table index = 16
-ERROR EVENT ID=52 Invalid DEST EXT command arg: extension text
-ERROR EVENT ID=52 Invalid DEST EXT command arg: extension text
+ERROR EVENT ID=52 Invalid DEST EXT command arg: extension
+ERROR EVENT ID=52 Invalid DEST EXT command arg: extension
 ERROR EVENT ID=52 Invalid DEST EXT command: destination file table is not loaded
 SysLog:1980-001-00:00:00.00000 CFE_TBL:ValidateHandle-Table Handle=0 is for unused Table Handle
 SysLog:1980-001-00:00:00.00000 CFE_TBL:ValidateAccess-Invalid Tbl Handle=0
 SysLog:1980-001-00:00:00.00000 CFE_TBL:Modified-App(0) does not have access to Tbl Handle=0
-DEBUG EVENT ID=51 DEST EXT command: file table index = 15, extension = OK
+DEBUG EVENT ID=51 DEST EXT command: file table index = 15, extension = 'OK'
 ERROR EVENT ID=54 Invalid DEST SIZE command length: expected = 16, actual = 15
 ERROR EVENT ID=54 Invalid DEST SIZE command length: expected = 16, actual = 17
 ERROR EVENT ID=54 Invalid DEST SIZE command arg: file table index = 16
@@ -131,17 +131,17 @@ DEBUG EVENT ID=59 DEST CLOSE command: file table index = 1
 ds_cmds.c -- test count = 92, test errors = 0
 
 *** DS -- Testing ds_file.c ***
-ERROR EVENT ID=15 FILE CREATE error: result = -4, dest = 13, name = /tt/basename_00000000.ext
-ERROR EVENT ID=16 FILE WRITE error: result = -10, length = 128, dest = 13, name = testname.ext
-ERROR EVENT ID=16 FILE WRITE error: result = -10, length = 64, dest = 13, name = testname.ext
-ERROR EVENT ID=16 FILE WRITE error: result = 789, length = 456, dest = 13, name = testname.ext
-ERROR EVENT ID=15 FILE CREATE error: result = -4, dest = 13, name = /tt/basename_00000123.ext
+ERROR EVENT ID=15 FILE CREATE error: result = -4, dest = 13, name = '/tt/basename_00000000.ext'
+ERROR EVENT ID=16 FILE WRITE error: result = -10, length = 128, dest = 13, name = 'testname.ext'
+ERROR EVENT ID=16 FILE WRITE error: result = -10, length = 64, dest = 13, name = 'testname.ext'
+ERROR EVENT ID=16 FILE WRITE error: result = 789, length = 456, dest = 13, name = 'testname.ext'
+ERROR EVENT ID=15 FILE CREATE error: result = -4, dest = 13, name = '/tt/basename_00000123.ext'
 Max Event Message Size Exceeded. Permitted 122; Actual 123
-ERROR EVENT ID=14 FILE NAME error: dest = 13, path = PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP, base = BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB name = /tt/ba
+ERROR EVENT ID=14 FILE NAME error: dest = 13, path = 'PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP', base = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBFILE NAME error: dest = 13, path = 'PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP', base = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 Max Event Message Size Exceeded. Permitted 122; Actual 123
-ERROR EVENT ID=14 FILE NAME error: dest = 13, path = PPPPPPPPPPPPPPPPPPPPPPPPPPPPPP, base = BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB, seq = 1980001000
+ERROR EVENT ID=14 FILE NAME error: dest = 13, path = 'PPPPPPPPPPPPPPPPPPPPPPPPPPPPPP', base = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB', seq = '19800FILE NAME error: dest = 13, path = 'PPPPPPPPPPPPPPPPPPPPPPPPPPPPPP', base = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB', seq = '198000
 Max Event Message Size Exceeded. Permitted 122; Actual 123
-ERROR EVENT ID=14 FILE NAME error: dest = 13, path = PPPPPPPPPPPPPPPPPPPPPPPP/, base = BBBBBBBBBBBBBBBBBBBBBBBBB, seq = 1980001000000, ext ="
+ERROR EVENT ID=14 FILE NAME error: dest = 13, path = 'PPPPPPPPPPPPPPPPPPPPPPPP/', base = 'BBBBBBBBBBBBBBBBBBBBBBBBB', seq = '1980001000000',FILE NAME error: dest = 13, path = 'PPPPPPPPPPPPPPPPPPPPPPPP/', base = 'BBBBBBBBBBBBBBBBBBBBBBBBB', seq = '1980001000000', 
 DS_FileCreateName() -- disk/path/base_1980001000000.ext (4)
 DS_FileCreateSequence() -- 1980001000000 (2)
 DS_FileCreateSequence() -- 00012345 (3)
@@ -174,9 +174,10 @@ SysLog:1980-001-00:00:00.00000 CFE_TBL:Validate-App(0) does not have access to T
 UTF Info: Return code for CFE TBL Api #11 returned to default
 UTF Info: Return code for CFE TBL Api #0 returned to default
 ERROR EVENT ID=11 Destination file table verify err: invalid descriptor text
-DEBUG EVENT ID=10 Destination file table verify results: good = 1, bad = 2, unused = 14
 ERROR EVENT ID=11 Destination file table verify err: index = 2, filename type = 0
-DEBUG EVENT ID=10 Destination file table verify results: good = 2, bad = 1, unused = 14
+INFO EVENT ID=10 Destination file table verify results: desc text = bad, good entries = 1, bad = 1, unused = 14
+ERROR EVENT ID=11 Destination file table verify err: index = 2, filename type = 0
+INFO EVENT ID=10 Destination file table verify results: desc text = OK, good entries = 1, bad = 1, unused = 14
 ERROR EVENT ID=11 Destination file table verify err: index = 5, invalid pathname text
 ERROR EVENT ID=11 Destination file table verify err: index = 5, invalid basename text
 ERROR EVENT ID=11 Destination file table verify err: index = 5, invalid extension text
@@ -186,9 +187,10 @@ ERROR EVENT ID=11 Destination file table verify err: index = 5, max file size = 
 ERROR EVENT ID=11 Destination file table verify err: index = 5, max file age = 59
 ERROR EVENT ID=11 Destination file table verify err: index = 5, sequence count = 100000000
 ERROR EVENT ID=13 Filter table verify err: invalid descriptor text
-DEBUG EVENT ID=12 Filter table verify results: good = 2, bad = 2, unused = 253
 ERROR EVENT ID=13 Filter table verify err: MID = 0x18BC, index = 2, filter = 0, file table index = 16
-DEBUG EVENT ID=12 Filter table verify results: good = 3, bad = 1, unused = 253
+INFO EVENT ID=12 Filter table verify results: desc text = bad, good entries = 2, bad = 1, unused = 253
+ERROR EVENT ID=13 Filter table verify err: MID = 0x18BC, index = 2, filter = 0, file table index = 16
+INFO EVENT ID=12 Filter table verify results: desc text = OK, good entries = 2, bad = 1, unused = 253
 ERROR EVENT ID=13 Filter table verify err: MID = 0x18BB, index = 10, filter = 0, file table index = 16
 ERROR EVENT ID=13 Filter table verify err: MID = 0x18BB, index = 10, filter = 0, filter type = 0
 ERROR EVENT ID=13 Filter table verify err: MID = 0x18BB, index = 10, filter = 0, filter parms N = 1, X = 0, O = 0
@@ -213,20 +215,20 @@ UTF INFO: CFE_TBL_Register called for new table DS.FILE_TBL.
 UTF INFO: CFE_TBL_Register called for new table DS.FILTER_TBL.
 Call to CFE_TBL_ValidateAccess returned 0
 Call to CFE_TBL_LoadFromFile returned fffffff8
-ERROR EVENT ID=8 Unable to load default Destination File Table: Filename = /cf/apps/ds_file_tbl.tbl, Error = 0xFFFFFFF8
+ERROR EVENT ID=8 Unable to load default Destination File Table: Filename = '/cf/apps/ds_file_tbl.tbl', Error = 0xFFFFFFF8
 Call to CFE_TBL_ValidateAccess returned 0
 Call to CFE_TBL_LoadFromFile returned fffffff8
-ERROR EVENT ID=8 Unable to load default Filter Table: Filename = /cf/apps/ds_filter_tbl.tbl, Error = 0xFFFFFFF8
+ERROR EVENT ID=8 Unable to load default Filter Table: Filename = '/cf/apps/ds_filter_tbl.tbl', Error = 0xFFFFFFF8
 ERROR EVENT ID=6 Critical Data Store access error = 0xFFFFFFFF
-INFO EVENT ID=1 Application initialized, version 0.0.0.0, data at 0x00518030
+INFO EVENT ID=1 Application initialized, version 2.4.1.0, data at 0x080CBC60
 UTF Info: Return code for CFE ES Api #16 returned to default
 Call to CFE_TBL_ValidateAccess returned 0
 Call to CFE_TBL_LoadFromFile returned fffffff8
-ERROR EVENT ID=8 Unable to load default Destination File Table: Filename = /cf/apps/ds_file_tbl.tbl, Error = 0xFFFFFFF8
+ERROR EVENT ID=8 Unable to load default Destination File Table: Filename = '/cf/apps/ds_file_tbl.tbl', Error = 0xFFFFFFF8
 Call to CFE_TBL_ValidateAccess returned 0
 Call to CFE_TBL_LoadFromFile returned fffffff8
-ERROR EVENT ID=8 Unable to load default Filter Table: Filename = /cf/apps/ds_filter_tbl.tbl, Error = 0xFFFFFFF8
-INFO EVENT ID=1 Application initialized, version 0.0.0.0, data at 0x00518030
+ERROR EVENT ID=8 Unable to load default Filter Table: Filename = '/cf/apps/ds_filter_tbl.tbl', Error = 0xFFFFFFF8
+INFO EVENT ID=1 Application initialized, version 2.4.1.0, data at 0x080CBC60
 
 DS HOUSEKEEPING DATA:
 CmdAcceptedCounter = 0 -- CmdRejectedCounter = 0
@@ -239,19 +241,19 @@ FilterTblLoadCounter = 0 -- FilterTblErrCounter = 2
 AppEnableState = 1
 
 Call to CFE_TBL_ValidateAccess returned 0
-DEBUG EVENT ID=10 Destination file table verify results: good = 8, bad = 0, unused = 9
+INFO EVENT ID=10 Destination file table verify results: desc text = OK, good entries = 7, bad = 0, unused = 9
 INFO EVENT ID=36 DS validation successful for Inactive 'DS.FILE_TBL'
 INFO EVENT ID=37 DS Successfully Updated 'DS.FILE_TBL'
 Call to CFE_TBL_ValidateAccess returned 0
-DEBUG EVENT ID=12 Filter table verify results: good = 16, bad = 0, unused = 241
+INFO EVENT ID=12 Filter table verify results: desc text = OK, good entries = 15, bad = 0, unused = 241
 INFO EVENT ID=36 DS validation successful for Inactive 'DS.FILTER_TBL'
 INFO EVENT ID=37 DS Successfully Updated 'DS.FILTER_TBL'
-DEBUG EVENT ID=47 DEST PATH command: file table index = 0, pathname = /tt/
-DEBUG EVENT ID=47 DEST PATH command: file table index = 1, pathname = /tt/
-DEBUG EVENT ID=47 DEST PATH command: file table index = 2, pathname = /tt/
-DEBUG EVENT ID=47 DEST PATH command: file table index = 3, pathname = /tt/
-DEBUG EVENT ID=47 DEST PATH command: file table index = 4, pathname = /tt/
-DEBUG EVENT ID=47 DEST PATH command: file table index = 5, pathname = /tt/
+DEBUG EVENT ID=47 DEST PATH command: file table index = 0, pathname = '/tt/'
+DEBUG EVENT ID=47 DEST PATH command: file table index = 1, pathname = '/tt/'
+DEBUG EVENT ID=47 DEST PATH command: file table index = 2, pathname = '/tt/'
+DEBUG EVENT ID=47 DEST PATH command: file table index = 3, pathname = '/tt/'
+DEBUG EVENT ID=47 DEST PATH command: file table index = 4, pathname = '/tt/'
+DEBUG EVENT ID=47 DEST PATH command: file table index = 5, pathname = '/tt/'
 DEBUG EVENT ID=45 DEST STATE command: file table index = 0, file state = 1
 DEBUG EVENT ID=45 DEST STATE command: file table index = 1, file state = 1
 DEBUG EVENT ID=45 DEST STATE command: file table index = 2, file state = 1
@@ -259,11 +261,11 @@ DEBUG EVENT ID=45 DEST STATE command: file table index = 3, file state = 1
 DEBUG EVENT ID=45 DEST STATE command: file table index = 4, file state = 1
 DEBUG EVENT ID=45 DEST STATE command: file table index = 5, file state = 1
 DEBUG EVENT ID=35 APP STATE command: state = 1
-INFO EVENT ID=31 NOOP command, Version 0.0.0.0
+INFO EVENT ID=31 NOOP command, Version 2.4.1.0
 
 DS HOUSEKEEPING DATA:
 CmdAcceptedCounter = 14 -- CmdRejectedCounter = 0
-DisabledPktCounter = 1 -- IgnoredPktCounter = 0
+DisabledPktCounter = 0 -- IgnoredPktCounter = 0
 FilteredPktCounter = 0 -- PassedPktCounter = 0
 FileWriteCounter = 0 -- FileWriteErrCounter = 0
 FileUpdateCounter = 0 -- FileUpdateErrCounter = 0
@@ -271,8 +273,8 @@ DestTblLoadCounter = 1 -- DestTblErrCounter = 2
 FilterTblLoadCounter = 1 -- FilterTblErrCounter = 2
 AppEnableState = 0
 
-ERROR EVENT ID=15 FILE CREATE error: result = -4, dest = 15, name = /this/is/valid/_this_is_valid_1980001000000.OK
-INFO EVENT ID=31 NOOP command, Version 0.0.0.0
+ERROR EVENT ID=15 FILE CREATE error: result = -4, dest = 15, name = '/this/is/valid/_this_is_valid_1980001000000.OK'
+INFO EVENT ID=31 NOOP command, Version 2.4.1.0
 DEBUG EVENT ID=33 Reset counters command
 ERROR EVENT ID=36 Invalid APP STATE command arg: app state = 99
 ERROR EVENT ID=38 Invalid FILTER FILE command arg: invalid messageID = 0x   0
@@ -307,20 +309,20 @@ UTF Info: Return value for CFE ES Api #22 set to 1
 UTF Info: Return value for CFE TBL Api #11 set to 4c000004
 Call to CFE_TBL_ValidateAccess returned 0
 Call to CFE_TBL_LoadFromFile returned fffffff8
-ERROR EVENT ID=8 Unable to load default Destination File Table: Filename = /cf/apps/ds_file_tbl.tbl, Error = 0xFFFFFFF8
+ERROR EVENT ID=8 Unable to load default Destination File Table: Filename = '/cf/apps/ds_file_tbl.tbl', Error = 0xFFFFFFF8
 Call to CFE_TBL_ValidateAccess returned 0
 Call to CFE_TBL_LoadFromFile returned fffffff8
-ERROR EVENT ID=8 Unable to load default Filter Table: Filename = /cf/apps/ds_filter_tbl.tbl, Error = 0xFFFFFFF8
+ERROR EVENT ID=8 Unable to load default Filter Table: Filename = '/cf/apps/ds_filter_tbl.tbl', Error = 0xFFFFFFF8
 INFO EVENT ID=37 DS Successfully Updated 'DS.FILE_TBL'
 INFO EVENT ID=37 DS Successfully Updated 'DS.FILTER_TBL'
-INFO EVENT ID=1 Application initialized, version 0.0.0.0, data at 0x00518030
+INFO EVENT ID=1 Application initialized, version 2.4.1.0, data at 0x080CBC60
 
  ***START DS SB COMMAND TESTING***
  ---------------------------------
 
  Housekeeping Request
  --------------------
-< CMD: APID:00bc SEQ:0 LEN:8 FC:0 PKT:18bc c000 0001 0000 
+< CMD: APID:00bc SEQ:0 LEN:8 FC:0 PKT:bc18 00c0 0100 0000 
 INFO EVENT ID=37 DS Successfully Updated 'DS.FILE_TBL'
 INFO EVENT ID=37 DS Successfully Updated 'DS.FILTER_TBL'
 
@@ -337,13 +339,13 @@ AppEnableState = 1
 
  Housekeeping Request
  --------------------
-< CMD: APID:00bc SEQ:0 LEN:8 FC:0 PKT:18bc c000 0001 0000 
+< CMD: APID:00bc SEQ:0 LEN:8 FC:0 PKT:bc18 00c0 0100 0000 
 INFO EVENT ID=37 DS Successfully Updated 'DS.FILE_TBL'
 INFO EVENT ID=37 DS Successfully Updated 'DS.FILTER_TBL'
 
 DS HOUSEKEEPING DATA:
 CmdAcceptedCounter = 0 -- CmdRejectedCounter = 0
-DisabledPktCounter = 0 -- IgnoredPktCounter = 1
+DisabledPktCounter = 0 -- IgnoredPktCounter = 0
 FilteredPktCounter = 0 -- PassedPktCounter = 0
 FileWriteCounter = 0 -- FileWriteErrCounter = 0
 FileUpdateCounter = 0 -- FileUpdateErrCounter = 0
@@ -354,19 +356,19 @@ AppEnableState = 1
 
  NOOP Ground Command
  --------------------
-< CMD: APID:00bb SEQ:0 LEN:8 FC:0 PKT:18bb c000 0001 0000 
-INFO EVENT ID=31 NOOP command, Version 0.0.0.0
+< CMD: APID:00bb SEQ:0 LEN:8 FC:0 PKT:bb18 00c0 0100 0000 
+INFO EVENT ID=31 NOOP command, Version 2.4.1.0
 
 
  Housekeeping Request
  --------------------
-< CMD: APID:00bc SEQ:0 LEN:8 FC:0 PKT:18bc c000 0001 0000 
+< CMD: APID:00bc SEQ:0 LEN:8 FC:0 PKT:bc18 00c0 0100 0000 
 INFO EVENT ID=37 DS Successfully Updated 'DS.FILE_TBL'
 INFO EVENT ID=37 DS Successfully Updated 'DS.FILTER_TBL'
 
 DS HOUSEKEEPING DATA:
 CmdAcceptedCounter = 1 -- CmdRejectedCounter = 0
-DisabledPktCounter = 0 -- IgnoredPktCounter = 3
+DisabledPktCounter = 0 -- IgnoredPktCounter = 0
 FilteredPktCounter = 0 -- PassedPktCounter = 0
 FileWriteCounter = 0 -- FileWriteErrCounter = 0
 FileUpdateCounter = 0 -- FileUpdateErrCounter = 0

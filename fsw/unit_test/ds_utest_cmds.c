@@ -2,7 +2,7 @@
 **
 ** $Id: ds_utest_cmds.c 1.7.1.1 2015/02/28 17:13:36EST sstrege Exp  $
 **
-**  Copyright © 2007-2014 United States Government as represented by the 
+**  Copyright ï¿½ 2007-2014 United States Government as represented by the 
 **  Administrator of the National Aeronautics and Space Administration. 
 **  All Other Rights Reserved.  
 **
@@ -377,6 +377,7 @@ void Test_cmds(void)
     }
 
     /* (8) good command packet, packet filter table loaded, entry is in use */
+    DS_TableCreateHash();
     CmdAcceptedCounter = DS_AppData.CmdAcceptedCounter;
     CFE_SB_InitMsg(UT_FilterFileCmd, DS_CMD_MID, sizeof(DS_FilterFileCmd_t), TRUE);
     UT_FilterFileCmd->MessageID = DS_HK_TLM_MID;

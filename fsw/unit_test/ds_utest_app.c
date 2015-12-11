@@ -2,7 +2,7 @@
 **
 ** $Id: ds_utest_app.c 1.6.1.1 2015/02/28 17:14:06EST sstrege Exp  $
 **
-**  Copyright © 2007-2014 United States Government as represented by the 
+**  Copyright ï¿½ 2007-2014 United States Government as represented by the 
 **  Administrator of the National Aeronautics and Space Administration. 
 **  All Other Rights Reserved.  
 **
@@ -326,7 +326,7 @@ void Test_app(void)
     CFE_SB_SetCmdCode((CFE_SB_MsgPtr_t) UT_NoopCmd, DS_NOOP_CC);
     DS_AppProcessMsg((CFE_SB_MsgPtr_t) UT_NoopCmd);
     TestCount++;
-    if (Counter32 == DS_AppData.DisabledPktCounter)
+    if (Counter32 != DS_AppData.DisabledPktCounter)
     {
         UTF_put_text("DS_AppProcessMsg() -- test failed (1)\n");
         FailCount++;
@@ -338,7 +338,7 @@ void Test_app(void)
     CFE_SB_InitMsg(UT_NoopCmd, DS_SEND_HK_MID, sizeof(DS_NoopCmd_t), TRUE);
     DS_AppProcessMsg((CFE_SB_MsgPtr_t) UT_NoopCmd);
     TestCount++;
-    if (Counter32 == DS_AppData.DisabledPktCounter)
+    if (Counter32 != DS_AppData.DisabledPktCounter)
     {
         UTF_put_text("DS_AppProcessMsg() -- test failed (2)\n");
         FailCount++;
