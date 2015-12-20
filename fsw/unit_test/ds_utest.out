@@ -137,11 +137,11 @@ ERROR EVENT ID=16 FILE WRITE error: result = -10, length = 64, dest = 13, name =
 ERROR EVENT ID=16 FILE WRITE error: result = 789, length = 456, dest = 13, name = 'testname.ext'
 ERROR EVENT ID=15 FILE CREATE error: result = -4, dest = 13, name = '/tt/basename_00000123.ext'
 Max Event Message Size Exceeded. Permitted 122; Actual 123
-ERROR EVENT ID=14 FILE NAME error: dest = 13, path = 'PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP', base = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBFILE NAME error: dest = 13, path = 'PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP', base = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+ERROR EVENT ID=14 FILE NAME error: dest = 13, path = 'PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP', base = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 Max Event Message Size Exceeded. Permitted 122; Actual 123
-ERROR EVENT ID=14 FILE NAME error: dest = 13, path = 'PPPPPPPPPPPPPPPPPPPPPPPPPPPPPP', base = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB', seq = '19800FILE NAME error: dest = 13, path = 'PPPPPPPPPPPPPPPPPPPPPPPPPPPPPP', base = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB', seq = '198000
+ERROR EVENT ID=14 FILE NAME error: dest = 13, path = 'PPPPPPPPPPPPPPPPPPPPPPPPPPPPPP', base = 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB', seq = '19800
 Max Event Message Size Exceeded. Permitted 122; Actual 123
-ERROR EVENT ID=14 FILE NAME error: dest = 13, path = 'PPPPPPPPPPPPPPPPPPPPPPPP/', base = 'BBBBBBBBBBBBBBBBBBBBBBBBB', seq = '1980001000000',FILE NAME error: dest = 13, path = 'PPPPPPPPPPPPPPPPPPPPPPPP/', base = 'BBBBBBBBBBBBBBBBBBBBBBBBB', seq = '1980001000000', 
+ERROR EVENT ID=14 FILE NAME error: dest = 13, path = 'PPPPPPPPPPPPPPPPPPPPPPPP/', base = 'BBBBBBBBBBBBBBBBBBBBBBBBB', seq = '1980001000000',
 DS_FileCreateName() -- disk/path/base_1980001000000.ext (4)
 DS_FileCreateSequence() -- 1980001000000 (2)
 DS_FileCreateSequence() -- 00012345 (3)
@@ -220,7 +220,7 @@ Call to CFE_TBL_ValidateAccess returned 0
 Call to CFE_TBL_LoadFromFile returned fffffff8
 ERROR EVENT ID=8 Unable to load default Filter Table: Filename = '/cf/apps/ds_filter_tbl.tbl', Error = 0xFFFFFFF8
 ERROR EVENT ID=6 Critical Data Store access error = 0xFFFFFFFF
-INFO EVENT ID=1 Application initialized, version 2.4.1.0, data at 0x080CBC60
+INFO EVENT ID=1 Application initialized, version 2.4.1.0, data at 0x080C1300
 UTF Info: Return code for CFE ES Api #16 returned to default
 Call to CFE_TBL_ValidateAccess returned 0
 Call to CFE_TBL_LoadFromFile returned fffffff8
@@ -228,7 +228,7 @@ ERROR EVENT ID=8 Unable to load default Destination File Table: Filename = '/cf/
 Call to CFE_TBL_ValidateAccess returned 0
 Call to CFE_TBL_LoadFromFile returned fffffff8
 ERROR EVENT ID=8 Unable to load default Filter Table: Filename = '/cf/apps/ds_filter_tbl.tbl', Error = 0xFFFFFFF8
-INFO EVENT ID=1 Application initialized, version 2.4.1.0, data at 0x080CBC60
+INFO EVENT ID=1 Application initialized, version 2.4.1.0, data at 0x080C1300
 
 DS HOUSEKEEPING DATA:
 CmdAcceptedCounter = 0 -- CmdRejectedCounter = 0
@@ -315,7 +315,7 @@ Call to CFE_TBL_LoadFromFile returned fffffff8
 ERROR EVENT ID=8 Unable to load default Filter Table: Filename = '/cf/apps/ds_filter_tbl.tbl', Error = 0xFFFFFFF8
 INFO EVENT ID=37 DS Successfully Updated 'DS.FILE_TBL'
 INFO EVENT ID=37 DS Successfully Updated 'DS.FILTER_TBL'
-INFO EVENT ID=1 Application initialized, version 2.4.1.0, data at 0x080CBC60
+INFO EVENT ID=1 Application initialized, version 2.4.1.0, data at 0x080C1300
 
  ***START DS SB COMMAND TESTING***
  ---------------------------------
