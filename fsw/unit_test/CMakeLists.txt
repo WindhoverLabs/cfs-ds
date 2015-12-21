@@ -36,12 +36,7 @@ target_link_libraries(DS-UT -fprofile-arcs gcov ${CMAKE_THREAD_LIBS_INIT})
 
 # We need to both run the test and compare the as-run with the expected output
 # with a diff command. 
-add_test(NAME ds-ut
-    COMMAND ${CMAKE_COMMAND}
-    	-DTEST_PROG=$<TARGET_FILE:DS-UT>
-    	-DEXPECTED_OUTPUT=${CMAKE_CURRENT_SOURCE_DIR}/ds_utest.out
-    	-DACTUAL_OUTPUT=${CMAKE_CURRENT_BINARY_DIR}/ds_utest.out
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/runtest.cmake)
+add_test(NAME ds-ut COMMAND $<TARGET_FILE:DS-UT>)
 
 # Copy input files to build directory
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/sbsim.in ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
