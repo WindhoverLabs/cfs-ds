@@ -18,11 +18,11 @@ include_directories(${OSAL_INC_DIRS})
 include_directories(${PSP_INC_DIRS})
 	
 # Build application
-add_library(${APP_FILE} SHARED ${APP_SRC})
+add_app(${APP_FILE} SHARED ${APP_SRC})
 
 # Build tables
-add_library(ds_file_tbl STATIC ${TABLE_DIR}/ds_file_tbl.c)
-add_library(ds_filter_tbl STATIC ${TABLE_DIR}/ds_filter_tbl.c)
+add_app(ds_file_tbl STATIC ${TABLE_DIR}/ds_file_tbl.c)
+add_app(ds_filter_tbl STATIC ${TABLE_DIR}/ds_filter_tbl.c)
 set_target_properties(ds_file_tbl PROPERTIES PREFIX "" SUFFIX ".tbl")
 set_target_properties(ds_filter_tbl PROPERTIES PREFIX "" SUFFIX ".tbl")
 
